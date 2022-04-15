@@ -13,12 +13,15 @@ const Exchanges = () => {
   const { data, isFetching } = useGetExchangesQuery();
   const exchangesList = data?.data?.exchanges;
 
+  console.log(data)
+
   if (isFetching) return <Loader />;
     //   if(isFetching) return "loading ..."
 
   return (
     <>
-      <Row>
+      <h1> COMING SOON </h1>
+      {/* <Row>
         <Col span={6}>Exchanges</Col>
         <Col span={6}>24h Trade Volume</Col>
         <Col span={6}>Markets</Col>
@@ -50,7 +53,7 @@ const Exchanges = () => {
             </Collapse>
           </Col>
         ))}
-      </Row>
+      </Row> */}
     </>
   );
 };

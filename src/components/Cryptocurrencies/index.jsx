@@ -13,7 +13,7 @@ const Cryptocurrencies = ({ simplified }) => {
       const [cryptos, setCryptos] = useState(cryptosList?.data?.coins)
       const [ searchTerm, setSearchTerm ] = useState('')
 
-    //   console.log(cryptos)
+      console.log(cryptos)
 
     useEffect(() => {
         // check if coins name same as input search bar
@@ -36,7 +36,7 @@ const Cryptocurrencies = ({ simplified }) => {
              <Row gutter={[32, 32]} className="crypto-card-container">
                      { cryptos?.map(currency => (
                          <Col xs={24} sm={12} lg={6} key={currency.id} className="crypto-card" >
-                              <Link to={`/crypto/${currency.id}`}>
+                              <Link to={`/crypto/${currency.uuid}`}>
                                     <Card 
                                             title={`${currency.rank}. ${currency.name}`} 
                                             extra={ <img className="crypto-image"
